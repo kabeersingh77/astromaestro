@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300&family=Yanone+Kaffeesatz&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+.Home{
+    position: relative;
+    margin-top: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #b575ff;
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menubar{
+    position: fixed;
+    background: #843ED6;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 6px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.menubar .logo{
+    width: 110px;
+    cursor: pointer;
+}
+
+.menubar ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+    position: relative;
+}
+
+.menubar ul li a{
+    font-size: medium;
+    font-weight: bolder;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.menubar ul li a:hover{
+    color: rgb(232, 153, 50);
+}
+
+#close, .contact{
+    text-transform: uppercase;
+    width: 100px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid rgb(232, 153, 50);
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#close:hover, .contact:hover{
+    background-color: rgb(232, 153, 50);
+}
+
+.contact:active{
+    opacity: 0.8;
+}
+
+.modal{
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fb{
+    font-size: 50px;
+}
+
+.fb i:hover{
+    color: rgb(71, 114, 255);
+}
+
+.modal.open{
+    opacity: 1;
+    z-index: 999;
+}
+
+.contact_inner{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    padding-top: 15px 25px;
+    text-align: center;
+    width: 420px;
+    height: 150px;
+}
+
+.contact h2{
+    color: #ffcc00;
+}
+
+.container{
+    font-size: 15px;
+    width: 40em;
+    height: 40em;
+    position: relative;
+}
+
+.sun{
+    position: absolute;
+    width: 15em;
+    height: 15em;
+    top: 12.5em;
+    left: 12.5em;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    box-shadow: 0 0 3em white;
+}
+
+.signs{
+    top: 23.7vh;
+    left: 175px;
+    width: 16.7em;
+    justify-content: center;
+    align-items: center;
+    height: 33.4vh;
+    position: absolute;
+}
+
+.earth, .moon{
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+
+.earth{
+    top: 5em;
+    right: 5em;
+    width: 30em;
+    height: 30em;
+    animation: orbit 36.5s linear infinite;
+}
+
+.moon{
+    top: 0;
+    right: 0;
+    width: 8em;
+    height: 8em;
+    animation: orbit 2.8s linear infinite;
+}
+.earth::before, .moon::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.earth::before{
+    top: 2.8em;
+    right: 2.8em;
+    width: 3em;
+    height: 3em;
+    background-color: #72cdfa;
+}
+
+.moon::before{
+    top: 0.8em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: #ccc;
+}
+
+@keyframes orbit {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.intro p{
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #fff;
+    gap: 4px;
+    display: flex;
+    font-size: 5em;
+    height: 84vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #b575ff;
+}
+
+.dropmenu{
+    display: none;
+    position: absolute;
+    right: 2.5rem;
+    top: 125px;
+    width: 250px;
+    height: 0;
+    background: rgba(225, 225, 225, 0.1);
+    backdrop-filter: blur(16px);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 2;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropmenu.open{
+    height: 350px;
+}
+
+.dropmenu ul li a{
+    padding: 0.7rem;
+    display: block;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.dropmenu .contact{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.dropmenu ul li a:hover{
+    color: #ffcc00;
+}
+
+.menubar .toggle_btn{
+    color: #fff;
+    font-size: 1.5rem;
+    display: none;
+    position: fixed;
+    right: 10px;
+}
+
+.menubar .toggle_btn:hover{
+    color: #ffcc00;
+    transition: 0.5s ease;
+}
+
+#home{
+    gap: 30px;
+}
+
+.menubar .toggle_btn:active{
+    scale: 0.9;
+}
+
+.gaurantee{
+    padding: 0 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+    z-index: 1;
+}
+
+.gaurantee .item{
+    font-size: larger;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 130px;
+    width: 30em;
+    border-radius: 10px;
+    padding: 0 30px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gaurantee .item:hover{
+    border-color: #ffcc00;
+}
+
+.gaurantee .item .icon{
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(#f4551c, hsl(39, 93%, 52%));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.consult h1{
+    margin: auto;
+    display: flex;
+    color: #fff;
+    font-size: 4em;
+    font-weight: bolder;
+    height: 30vh;
+    position: relative;
+    justify-content: center;
+}
+
+.works{
+    margin-top: 50px;
+    padding: 0 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.works .mains{
+    padding: 32px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+
+.works .info{
+    line-height: 22px;
+    font-size: medium;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.model{
+    position: absolute;
+    margin-top: 300px;
+    z-index: 0;
+}
+
+.model img{
+    width: 26em;
+}
+
+.about{
+    padding: 15px;
+    color: #fff;
+    font-size: 30px;
+}
+
+@media (max-width: 840px){
+    .menubar .logo{
+        width: 90px;
+    }
+    .container{
+        font-size: 13px;
+    }
+
+    ul li a, .contact, .signs{
+        display: none;
+    }
+    
+    .menubar .toggle_btn{
+        display: block;
+        right: 8%;
+    }
+
+    #text{
+        font-size: 50px;
+    }
+    .gaurantee .item{
+        height: 100px;
+        font-size: 14px;
+        gap: 8px;
+        width: 22em;
+    }
+    
+    .consult{
+        font-size: 12px;
+    }
+
+    .model img{
+        display: block;
+        right: 10%;
+        width: 300px;
+    }
+
+    .dropmenu{
+        display: block;
+        position: fixed;
+    }
+}
