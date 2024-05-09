@@ -33,13 +33,15 @@ toggleBtn.onclick = function () {
 }
 
 let text = document.getElementById('text');
-let gaurentee = document.getElementById('gaurantee');
+let services = document.getElementById('services');
+let gaurantee = document.getElementById('gaurantee');
 let container = document.getElementById('container');
 window.addEventListener('scroll', () =>{
   let value = window.scrollY;
 
   text.style.marginTop = value * -1.5 + 'px';
-  gaurantee.style.marginTop = value * -0.5 + 'px';
+  services.style.marginTop = value * -0.5 + 'px';
+  gaurantee.style.marginTop = value * -0.3 + 'px';
   container.style.marginBottom = value * 1.5 + 'px';
 })
 
