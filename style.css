@@ -205,7 +205,7 @@
     }
 }
 
-.intro p{
+#text{
     padding: 10px;
     text-transform: uppercase;
     font-weight: bolder;
@@ -246,7 +246,7 @@ section{
 }
 
 .dropmenu.open{
-    height: 350px;
+    height: 270px;
 }
 
 .dropmenu ul li a{
@@ -294,7 +294,7 @@ section{
 }
 
 .gaurantee{
-    padding: 0 50px;
+    padding: 0 40px;
     display: flex;
     flex-wrap: nowrap;
     gap: 24px;
@@ -311,16 +311,16 @@ section{
     width: 30em;
     border-radius: 10px;
     padding: 0 30px;
-    border: 2px solid transparent;
+    border: 3px solid transparent;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.gaurantee .item:hover{
-    border-color: #ffcc00;
+.gaurantee.item.info:hover{
+    border-bottom: blue;
 }
 
-.gaurantee .item .icon{
+.gaurantee.item.icon{
     width: 70px;
     height: 70px;
     background: linear-gradient(#f4551c, hsl(39, 93%, 52%));
@@ -357,7 +357,7 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 25%;
+    width: 96%;
     border-radius: 10px;
     border: 2px solid transparent;
 }
@@ -385,7 +385,7 @@ section{
     font-size: 30px;
 }
 
-@media (max-width: 840px){
+@media screen and (max-width: 840px){
     .menubar .logo{
         width: 90px;
     }
@@ -393,7 +393,7 @@ section{
         font-size: 13px;
     }
 
-    ul li a, .contact, .signs{
+    ul li a, .signs{
         display: none;
     }
     
@@ -412,8 +412,9 @@ section{
         width: 22em;
     }
     
-    .consult{
+    .consult h1{
         font-size: 12px;
+        top: 100vh;
     }
 
     .model img{
@@ -425,5 +426,53 @@ section{
     .dropmenu{
         display: block;
         position: fixed;
+    }
+    .contact{
+        margin-right: 20vh;
+        font-size: smaller;
+        text-wrap: nowrap;
+    }
+}
+
+@media screen and (max-width: 739px) {
+    .menubar .logo{
+        width: 80px;
+    }
+    .sun,.moon,.earth{
+        display: none;
+    }
+
+    #text{
+        font-size: 22px;
+    }
+    .gaurantee, .works{
+        gap: 9px;
+    }
+    .gaurantee .item{
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: small;
+        gap: 2px;
+        height: 16em;
+        width: 49%;
+    }
+    .gaurantee.item.icon{
+        display: none;
+    }
+    .model img{
+        width: 180px;
+    }
+    .consult h1{
+        font-size: 24px;
+        top: 60px;
+    }
+    .works{
+        flex-direction: column;
+        padding: 85px 42px 0;
+        width: 22em;
+    }
+    .works.mains{
+        width: 96%;
+        justify-content: center;
     }
 }
