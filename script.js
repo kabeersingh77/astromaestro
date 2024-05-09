@@ -33,7 +33,7 @@ toggleBtn.onclick = function () {
 }
 
 let text = document.getElementById('text');
-let services = document.getElementById('services');
+let services = document.getElementById('consult');
 let gaurantee = document.getElementById('gaurantee');
 let container = document.getElementById('container');
 window.addEventListener('scroll', () =>{
