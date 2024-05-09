@@ -285,8 +285,8 @@ section{
     transition: 0.5s ease;
 }
 
-#home{
-    gap: 30px;
+#trust{
+    gap: 0px;
 }
 
 .menubar .toggle_btn:active{
@@ -294,6 +294,7 @@ section{
 }
 
 .gaurantee{
+    top: 0;
     padding: 0 40px;
     display: flex;
     flex-wrap: nowrap;
@@ -316,7 +317,7 @@ section{
     transition: all 0.3s ease;
 }
 
-.gaurantee.item.info:hover{
+.gaurantee.item:hover{
     border-bottom: blue;
 }
 
@@ -343,7 +344,9 @@ section{
 }
 
 .works{
-    margin-top: 50px;
+    top: 0;
+    bottom: 20vh;
+    margin-top: 20px;
     padding: 0 50px;
     display: flex;
     flex-wrap: nowrap;
@@ -434,19 +437,20 @@ section{
     }
 }
 
-@media screen and (max-width: 739px) {   
+@media screen and (max-width: 739px) {
+    
     .sun{
         position: absolute;
-        width: 12em;
-        height: 12em;
-        top: 15em;
-        left: 7em;
+        width: 11em;
+        height: 11em;
+        top: 18em;
+        left: 7.5em;
         background-color: #ffcc00;
         border-radius: 50%;
         box-shadow: 0 0 3em white;
     }
-
-
+    
+    
     .earth, .moon{
         position: absolute;
         border-style: solid;
@@ -454,9 +458,9 @@ section{
         border-width: 0.1em 0.1em 0 0;
         border-radius: 50%;
     }
-
+    
     .earth{
-        top: 10em;
+        top: 14em;
         right: 2em;
         width: 20em;
         height: 20em;
@@ -465,7 +469,7 @@ section{
     
     .moon{
         top: 1em;
-        right: 0.5em;
+        right: 0.7em;
         width: 5em;
         height: 5em;
         animation: orbit 2.8s linear infinite;
@@ -498,7 +502,6 @@ section{
         }
     }
 
-
     .menubar .logo{
         width: 80px;
     }
@@ -517,15 +520,13 @@ section{
         height: 16em;
         width: 49%;
     }
-    .gaurantee.item.icon{
-        display: none;
-    }
+
     .model img{
-        width: 180px;
+        width: 200px;
     }
     .consult h1{
         font-size: 24px;
-        top: 60px;
+        top: 20vh;
     }
     .works{
         flex-direction: column;
