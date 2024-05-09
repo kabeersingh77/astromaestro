@@ -434,12 +434,73 @@ section{
     }
 }
 
-@media screen and (max-width: 739px) {
+@media screen and (max-width: 739px) {   
+    .sun{
+        position: absolute;
+        width: 12em;
+        height: 12em;
+        top: 15em;
+        left: 7em;
+        background-color: #ffcc00;
+        border-radius: 50%;
+        box-shadow: 0 0 3em white;
+    }
+
+
+    .earth, .moon{
+        position: absolute;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+        border-width: 0.1em 0.1em 0 0;
+        border-radius: 50%;
+    }
+
+    .earth{
+        top: 10em;
+        right: 2em;
+        width: 20em;
+        height: 20em;
+        animation: orbit 36.5s linear infinite;
+    }
+    
+    .moon{
+        top: 1em;
+        right: 0.5em;
+        width: 5em;
+        height: 5em;
+        animation: orbit 2.8s linear infinite;
+    }
+    .earth::before, .moon::before{
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+    }
+    
+    .earth::before{
+        top: 2.2em;
+        right: 2.2em;
+        width: 2em;
+        height: 2em;
+        background-color: #72cdfa;
+    }
+    
+    .moon::before{
+        top: 0.8em;
+        right: 0.2em;
+        width: 1.2em;
+        height: 1.2em;
+        background-color: #ccc;
+    }
+    
+    @keyframes orbit {
+        to{
+            transform: rotate(360deg);
+        }
+    }
+
+
     .menubar .logo{
         width: 80px;
-    }
-    .sun,.moon,.earth{
-        display: none;
     }
 
     #text{
