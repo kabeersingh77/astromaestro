@@ -246,7 +246,7 @@ section{
 }
 
 .dropmenu.open{
-    height: 270px;
+    height: 200px;
 }
 
 .dropmenu ul li a{
@@ -431,7 +431,7 @@ section{
         position: fixed;
     }
     .contact{
-        margin-right: 20vh;
+        margin-right: 14vh;
         font-size: smaller;
         text-wrap: nowrap;
     }
@@ -536,5 +536,28 @@ section{
     .works.mains{
         width: 96%;
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .container{
+        bottom: 10vh;
+    }
+    #text{
+        font-size: 28px;
+    }
+    .sun{
+        top: 34vh;
+        left: 32%;
+    }
+    .earth{
+        top: 28vh;
+        right: 5em;
+    }
+    .model img{
+        width: 300px;
+    }
+    .contact{
+        border: none;
     }
 }
