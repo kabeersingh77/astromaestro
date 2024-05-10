@@ -248,6 +248,7 @@ section{
 
 .dropmenu.open{
     height: 200px;
+    z-index: 1000;
 }
 
 .dropmenu ul li a{
