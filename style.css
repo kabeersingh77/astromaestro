@@ -240,6 +240,7 @@ section{
     height: 0;
     background: rgba(225, 225, 225, 0.1);
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-radius: 10px;
     overflow: hidden;
     z-index: 2;
