@@ -127,6 +127,10 @@
     color: #ffcc00;
 }
 
+.active{
+    color: #ffcc00;
+}
+
 .container{
     font-size: 15px;
     width: 40em;
@@ -146,13 +150,10 @@
 }
 
 .signs{
-    top: 23.7vh;
-    left: 175px;
-    width: 16.7em;
-    justify-content: center;
+    width: 14rem;
+    justify-self: center;
+    align-content: center;
     align-items: center;
-    height: 33.4vh;
-    position: absolute;
 }
 
 .earth, .moon{
@@ -240,16 +241,15 @@ section{
     height: 0;
     background: rgba(225, 225, 225, 0.1);
     backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
-    z-index: 2;
-    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .dropmenu.open{
     height: 200px;
-    z-index: 1000;
 }
 
 .dropmenu ul li a{
@@ -398,7 +398,6 @@ section{
     .container{
         font-size: 13px;
     }
-
     ul li a, .signs{
         display: none;
     }
@@ -461,7 +460,7 @@ section{
         border-width: 0.1em 0.1em 0 0;
         border-radius: 50%;
     }
-    
+
     .earth{
         top: 14em;
         right: 2em;
@@ -547,7 +546,7 @@ section{
         bottom: 10vh;
     }
     #text{
-        font-size: 28px;
+        font-size: 25px;
     }
     .sun{
         top: 34vh;
@@ -564,3 +563,4 @@ section{
         border: none;
     }
 }
+
